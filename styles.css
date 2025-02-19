@@ -1,5 +1,5 @@
 body {
-    background-color: #d3e3fc; /* Azul clarito */
+    background-color: #B7E1EB; /* Azul clarito */
     margin: 0;
     height: 100vh;
     display: flex;
@@ -8,14 +8,14 @@ body {
 }
 
 header {
-    background-color: #87b5d6; /* Azul más oscuro */
+    background-color: #069DBF; /* Azul más oscuro */
     padding: 10px;
     text-align:center;
     width: 100%;
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 55px;
     margin: 0;
     color: rgb(255, 255, 255);
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -42,7 +42,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    background-color: #d3e3fc;
+    background-color: #ffffff;
     color: rgb(0, 0, 0);
     padding: 8px 12px;
     border-radius: 5px;
@@ -50,7 +50,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #0a9396;
+    background-color: #B7E1EB;
 }
 
 /* Media Query para pantallas pequeñas */
