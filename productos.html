@@ -22,10 +22,6 @@
         </ul>
     </nav>
 
-    <div id="buscador-container">
-        <input type="text" id="buscador" placeholder="Buscar productos..." />
-        <i id="icono-busqueda" class="fa fa-search"></i> <!-- Icono de búsqueda -->
-    </div>
     
 
     <!-- Botón para ver el carrito -->
@@ -34,8 +30,14 @@
     <!-- Contenedor de categorías -->
     <section class="categorias" id="categorias"></section>
 
+    <div id="buscador-container">
+        <input type="text" id="buscador" placeholder="Buscar productos..." />
+        <i id="icono-busqueda" class="fa fa-search"></i> <!-- Icono de búsqueda -->
+    </div>
+
     <!-- Contenedor del catálogo de productos -->
     <section class="catalogo" id="catalogo"></section>
+    
 
     <!-- Modal del carrito -->
     <div id="carritoModal" class="modal">
@@ -53,9 +55,9 @@
             <input type="tel" id="telefono" placeholder="Teléfono de contacto" required>
             <input type="email" id="correo" placeholder="Correo electrónico" required>
             <select id="forma-pago">
-            <option value="tarjeta">Tarjeta</option>
-            <option value="transferencia">Transferencia</option>
-            <option value="efectivo">Efectivo</option>
+            <option value="Tarjeta">Tarjeta</option>
+            <option value="Transferencia">Transferencia</option>
+            <option value="Efectivo">Efectivo</option>
             </select>
             <button type="submit">Enviar Orden</button>
         </form>

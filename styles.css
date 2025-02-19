@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background-color: #069DBF; /* Azul más oscuro */
+    background-color: #3797BD; /* Azul más oscuro */
     padding: 10px;
     text-align:center;
     width: 100%;
@@ -51,30 +51,6 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #B7E1EB;
-}
-
-/* Media Query para pantallas pequeñas */
-@media screen and (max-width: 768px) {
-    header {
-        padding: 15px; /* Aumentamos el padding en dispositivos móviles */
-    }
-
-    h1 {
-        font-size: 30px; /* Aumentamos el tamaño de la fuente */
-    }
-
-    nav {
-        flex-direction: row; /* Mantenemos la dirección horizontal */
-        align-items: center; /* Alineamos los enlaces al centro */
-    }
-
-    nav ul {
-        gap: 8px; /* Reducimos un poco el espacio entre los enlaces */
-    }
-
-    nav ul li a {
-        padding: 10px 16px; /* Ajustamos un poco el padding de los enlaces */
-    }
 }
 
 /* Estilo para las categorías */
@@ -128,12 +104,13 @@ nav ul li a:hover {
     text-align: center;
     transition: transform 0.3s ease;
     width: 100%;
-    max-width: 300px;
+    max-width: 300px; /* Este es el tamaño normal para pantallas grandes */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     min-height: 350px;
+    max-height: 450px; /* Añadimos un max-height para limitar la altura */
 }
 
 /* Estilo para la galería de imágenes */
@@ -265,10 +242,11 @@ nav ul li a:hover {
 /* Estilo para el formulario */
 form {
     margin-top: 20px;
+    
 }
 
 form input, form select, form button {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     margin: 5px 0;
     border-radius: 8px;
@@ -329,7 +307,6 @@ form button:hover {
     display: inline-block;
 }
 
-
 /* Estilo del buscador */
 #buscador-container {
     display: flex;
@@ -361,9 +338,47 @@ form button:hover {
     font-size: 20px;
 }
 
-/* Responsive para pantallas más pequeñas */
+/* Ajuste para pantallas pequeñas */
 @media screen and (max-width: 768px) {
+    .catalogo {
+        grid-template-columns: repeat(3, 1fr); /* 3 productos por fila en pantallas pequeñas */
+        gap: 5px; /* Reducimos el espacio entre productos */
+    }
+
+    .producto {
+        max-width: 220px; /* Reducimos el tamaño de los productos en pantallas pequeñas */
+        width: 100%; /* Aseguramos que el producto no exceda el 100% */
+        max-height: 350px; /* Limitar la altura del producto en pantallas pequeñas */
+    }
+
     #buscador {
-        width: 300px;
+        width: 250px; /* Ajustamos el tamaño del buscador para pantallas pequeñas */
+    }
+    #icono-busqueda {
+        margin-left: 240px; /* Mueve el icono al centro */
+        pointer-events: none; /* Hace que el icono no interfiera con la interacción del input */
+        position: absolute;
+        color: #aaa;
+        font-size: 20px;
+    }
+
+    .cantidad-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px; /* Separación aumentada entre los botones + y - */
+        margin-top: 10px;
+    }
+
+    .agregar-carrito {
+        margin-top: 8px;
+        font-size: 12px;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
     }
 }
